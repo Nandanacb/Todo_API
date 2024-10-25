@@ -58,7 +58,7 @@ class _FirstpageState extends State<Firstpage> {
                       itemBuilder: (context, index) {
                         final Todo = dataFromAPI!.todos[index];
                         return Container(
-                          height: 150,
+                          height: 180,
                           width: double.infinity,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
@@ -70,20 +70,23 @@ class _FirstpageState extends State<Firstpage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Todo:${Todo.id}",
+                                  "Id:${Todo.id}",
                                   style: TextStyle(
                                     fontSize: 15,
                                   ),
                                 ),
+                                SizedBox(height: 10),
                                 Text("Todo:${Todo.todo}",
                                     style: TextStyle(
                                       fontSize: 15,
                                     )),
-                                Text("Todo:${Todo.completed}",
+                                SizedBox(height: 10),
+                                Text("Completed:${Todo.completed}",
                                     style: TextStyle(
                                       fontSize: 15,
                                     )),
-                                Text("Todo:${Todo.userId}",
+                                SizedBox(height: 10),
+                                Text("User id:${Todo.userId}",
                                     style: TextStyle(
                                       fontSize: 15,
                                     )),
